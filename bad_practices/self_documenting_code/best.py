@@ -14,6 +14,8 @@ def approve_immediately(credit_score: int, income_amount_ratio: float, has_cosig
 
 
 def approve_based_on_ratio(credit_score: int, income_amount_ratio: float) -> bool:
+    if credit_score >= excellent_credit_threshold:
+        raise ValueError(f'credit_score should be < {excellent_credit_threshold}')
     if credit_score >= good_credit_threshold:
         return income_amount_ratio >= good_income_amount_ratio_threshold
     else:
