@@ -23,5 +23,5 @@ def is_list_empty_better(some_list: List) -> bool:
     return len(some_list) == 0
 
 
-def is_list_empty_bets(some_list: List) -> bool:
+def is_list_empty_best(some_list: List) -> bool:
     return bool(some_list)
