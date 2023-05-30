@@ -32,15 +32,28 @@ def get_email_domain_bad1(email: str, case: str) -> str:
     return domain.upper() if case.lower() == 'upper' else domain
 
 
+get_email_domain_bad1('bdsc@gmail.com', 'upper')
+get_email_domain_bad1('bdsc@gmail.com', 'up')
+
+
 def get_email_domain_bad2(email: str, upper_case: str) -> str:
     domain = email.split('@')[-1]
 
-    if upper_case.lower()[0] == 'y':
+    if upper_case.upper()[0] == 'Y':
         return domain.upper()
     else:
         return domain
 
 
+get_email_domain_bad2('bdsc@gmail.com', 'yes')
+get_email_domain_bad2('bdsc@gmail.com', 'y')
+get_email_domain_bad2('bdsc@gmail.com', 'no')
+
+
 def get_email_domain_better(email: str, upper_case: bool) -> str:
     domain = email.split('@')[-1]
     return domain.upper() if upper_case else domain
+
+
+get_email_domain_better('bdsc@gmail.com', True)
+get_email_domain_better('bdsc@gmail.com', False)
