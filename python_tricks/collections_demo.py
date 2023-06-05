@@ -43,3 +43,4 @@ deque_pop_left(collection)
 
 
 Counter('hello world')
+Counter(['Tyler', 'Kevin', 'Jill', 'Vi', 'Vi', 'Tyler'])
